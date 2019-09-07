@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/patrick/Documentos/Treinamento React Native/Task/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v23/values-v23.xml",
+            "outputFile": "/home/patrick/Documentos/aplicativos/tasks-app/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v23/values-v23.xml",
             "map": [
                 {
                     "source": "/home/patrick/.gradle/caches/transforms-2/files-2.1/07c1b49f8f3e8d6fd4d397efdd5d0312/res/values-v23/values-v23.xml",

@@ -1,0 +1,4 @@
+#Fri Sep 06 09:30:56 BRT 2019
+base.0=/home/patrick/Documentos/Treinamento React Native/Task/android/app/build/intermediates/transforms/dexMerger/debug/0
+path.0=classes.dex
+renamed.0=classes.dex

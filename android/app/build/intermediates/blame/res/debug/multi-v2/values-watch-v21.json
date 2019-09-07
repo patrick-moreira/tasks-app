@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/patrick/Documentos/Treinamento React Native/Task/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-watch-v21/values-watch-v21.xml",
+            "map": [
+                {
+                    "source": "/home/patrick/.gradle/caches/transforms-2/files-2.1/07c1b49f8f3e8d6fd4d397efdd5d0312/res/values-watch-v21/values-watch-v21.xml",
+                    "from": {
+                        "startLines": "2,6,10",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,271,499",
+                        "endLines": "5,9,13",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "266,494,724"
+                    }
+                }
+            ]
+        }
+    ]
+}

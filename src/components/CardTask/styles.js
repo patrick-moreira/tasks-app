@@ -1,14 +1,15 @@
-import { StyleSheet } from 'react-native'
+import styled from 'styled-components/native';
 
-export const styles = StyleSheet.create({
-    cardContainer:{
-        marginTop: 20,
-        flexDirection: 'row',
-        justifyContent: 'space-between'
-    },
-    cardTask:{
-        backgroundColor: '#fff',
-        flex: 0.96,
-        justifyContent: 'center',
-    }
-});
+export const CardContainer = styled.View`
+    margin-top: 20;
+    flex-direction: row;
+    justify-content: space-between;
+`;
+
+export const CardTaskname = styled.View`
+    background: #fff;
+    flex: 0.96;
+    justify-content: center;
+
+`;
+

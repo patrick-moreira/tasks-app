@@ -1,13 +1,19 @@
 import React from 'react';
-
-import { View, Text } from 'react-native';
-import { styles } from './styles';
+import { TouchableOpacity } from 'react-native';
+import { Container, Title, Text, ContainerButton } from './styles';
 
 const Header = (props) => {
     return (
-        <View style={styles.containerHeader}>
-            <Text style={styles.textHeader}>{props.headertitle}</Text>
-        </View>
+        <Container>
+            <Title>
+                <Text>{props.headertitle}</Text>
+            </Title>
+            <ContainerButton>
+                <TouchableOpacity>
+                    <Text>+</Text>
+                </TouchableOpacity>
+            </ContainerButton>
+        </Container>
     );
 
 }

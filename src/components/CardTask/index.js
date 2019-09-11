@@ -1,16 +1,16 @@
 import React from 'react';
-import { View, Text } from 'react-native';
-import { styles } from './styles';
+import { Text } from 'react-native';
+import { CardContainer, CardTaskname } from './styles';
 import Button from '../Button';
 
 const CardTask = (props) => {
     return (                       
-        <View style={styles.cardContainer}>
-            <View style={styles.cardTask}>
+        <CardContainer>
+            <CardTaskname>
                 <Text>{props.taskname}</Text>
-            </View>
-            <Button title="Remover" onPress={() => props.removeTask(props.taskname)} color={'#f00'}/>
-        </View>
+            </CardTaskname>
+            <Button title='X' onPress={() => props.removeTask(props.taskname)} color={'#f00'}/>
+        </CardContainer>
     );
 }
 

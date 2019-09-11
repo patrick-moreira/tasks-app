@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { View } from 'react-native';
-import { styles } from './styles'; 
+import { View, TextInput } from 'react-native';
+import { Container, InputContainer } from './styles'; 
 
 import Header from '../../components/Header';
 import CardTask from '../../components/CardTask';
-import InputTask from '../../components/InputTask';
+import Button from '../../components/Button';
 
 
 const Main = () => {
@@ -25,19 +25,20 @@ const Main = () => {
     return(
         <View>
             <Header headertitle="Minhas Tarefas" />
-            <View style={styles.container}> 
-                <InputTask 
-                    placeholder="Digite sua tarefa..."
-                    onChangeText={(input) => setInput(input)}
-                    value={input}
-                    titleButton="Adicionar" 
-                    onPressButton={addTask}
-                />
+            <Container>
+                <InputContainer>         
+                    <TextInput 
+                        placeholder="Digite sua tarefa..."
+                        onChangeText={(input) => setInput(input)}
+                        value={input}  
+                    />
+                    <Button title="Adicionar" onPress={addTask} color={'#00f'}/>
+                </InputContainer>    
                 
                 {tasks.map((task) => (    
                     <CardTask taskname={task} removeTask={removeTask}/>    
                 ))}
-            </View>
+            </Container>
         </View>
 
     );

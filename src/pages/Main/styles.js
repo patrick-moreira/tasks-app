@@ -1,9 +1,12 @@
-import { StyleSheet } from 'react-native';
+import styled from 'styled-components/native'
 
-export const styles = StyleSheet.create({
-    container:{
-        paddingHorizontal: 10,
-        paddingVertical: 8
-    }
-});
+export const Container = styled.View`
+    paddingHorizontal: 10px;
+    paddingVertical: 8px;
+`;
+
+export const InputContainer = styled.View`
+    flexDirection: row;
+    justifyContent: space-between; 
+`;
 

@@ -1,45 +1,48 @@
 import React, { useState } from 'react';
-import { View, TextInput } from 'react-native';
-import { Container, InputContainer } from './styles'; 
+import { Container, ContainerTasks } from './styles'; 
 
 import Header from '../../components/Header';
 import CardTask from '../../components/CardTask';
-import Button from '../../components/Button';
-
 
 const Main = () => {
-    const [input, setInput] = useState('');
-    const [tasks, setTask] = useState(['Tarefa 1']);
+    const [input, setInput] = useState(
+            {name: '', description: '', date: ''}
+    );
+    const [tasks, setTask] = useState(
+        [
+            {key: 1, name: 'Tarefa 1', description: 'Minha primeira tarefa', date: '11/09/2019'},
+            {key: 2, name: 'Tarefa 2', description: 'Minha segunda tarefa', date: '11/09/2019'},
+            {key: 3, name: 'Tarefa 3', description: 'Minha terceira tarefa', date: '11/09/2019'}
+        ]
+    );
 
     const addTask = () => {
-        setTask([...tasks, input]);
+        let count = tasks.length+1;
+        let newTask = 
+            {key: count, name: input.name, description: input.description, date: input.date}
+        
+        setTask([...tasks, newTask]);
         setInput('');
-        //alert('Item adicionado com sucesso!');
     }
-    
+
     const removeTask = (task) => {
         setTask(tasks.filter(item => item !== task))
-        //alert('Item removido com sucesso!');
     }
 
     return(
-        <View>
-            <Header headertitle="Minhas Tarefas" />
-            <Container>
-                <InputContainer>         
-                    <TextInput 
-                        placeholder="Digite sua tarefa..."
-                        onChangeText={(input) => setInput(input)}
-                        value={input}  
-                    />
-                    <Button title="Adicionar" onPress={addTask} color={'#00f'}/>
-                </InputContainer>    
-                
+        <Container>
+            <Header 
+                headertitle="Minhas Tarefas" 
+                input={input} 
+                setInput={setInput}
+                addTask={addTask}  
+            />
+            <ContainerTasks>
                 {tasks.map((task) => (    
-                    <CardTask taskname={task} removeTask={removeTask}/>    
+                    <CardTask nametask={task} removeTask={removeTask}/>    
                 ))}
-            </Container>
-        </View>
+            </ContainerTasks>
+        </Container>
 
     );
 }
